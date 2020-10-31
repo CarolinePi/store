@@ -1,0 +1,9 @@
+.table_tile {
+    display: flex;
+    flex-direction: row;
+    margin: 0 100px 0 100px;
+}
+
+.product_panel{
+    display: block;
+}

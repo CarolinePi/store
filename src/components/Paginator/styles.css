@@ -1,0 +1,20 @@
+.pagination {
+    vertical-align: middle;
+}
+
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.active {
+    background-color: #bbb;
+    color: white;
+}
+
+.pagination a:hover:not(.active) {background-color: #c7f2ff;}

@@ -1,0 +1,55 @@
+.root {
+    position: relative;
+    background-color: #c7f2ff;
+}
+
+.nav {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    justify-content: space-between;
+}
+
+.header {
+    padding-top: 0.1rem;
+}
+
+/*.search {*/
+/*    display: flex;*/
+/*}*/
+
+.nav_wrapper {
+    display: flex;
+    top: 100%;
+    right: 0;
+    left: 0;
+    z-index: -1;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+    list-style: none;
+    border: 0;
+    margin-block-start: 0;
+}
+
+.nav_wrapper.active {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.nav_item a {
+    display: block;
+    padding: 1.5rem 1.25rem;
+    text-decoration: none;
+    color: #222;
+}
+
+/*.nav_item svg {*/
+/*    display: inline-block;*/
+/*    vertical-align: middle;*/
+/*    width: 28px;*/
+/*    height: 28px;*/
+/*    margin-right: 1rem;*/
+/*}*/
+
+.nav_item.active a {
+    border-left-color: #222;
+}
