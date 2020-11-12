@@ -1,34 +1,18 @@
 import React, { Component } from "react";
 
 import css from './App.css';
-import Product from "./Product";
-import {MainPage} from "../pages/Main";
+import {MainStoreProvider} from '../pages/Main/index'
+import {Page} from "../pages/Main/page";
 
 class App extends Component {
 
     render() {
         return (
-            <MainPage />
+            <MainStoreProvider>
+                <Page />
+            </MainStoreProvider>
         )
     }
-
-    // render() {
-    //     return (
-    //         <div>
-    //             <h1 className={css.text}>My React Aавпfffпапаpp!</h1>
-    //             <Product
-    //                 artNumber={12345}
-    //                 name={'fff'}
-    //                 img={'fff'}
-    //                 brand={'adidas'}
-    //                 weight={500}
-    //                 quantity={10}
-    //                 price={1300}
-    //                 stock={true}
-    //             />
-    //         </div>
-    //     );
-    // }
 }
 
 export default App;

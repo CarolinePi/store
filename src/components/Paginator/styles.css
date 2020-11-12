@@ -1,8 +1,11 @@
 .pagination {
-    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
 }
 
-.pagination a {
+.pagination button {
     color: black;
     float: left;
     padding: 8px 16px;
@@ -17,4 +20,4 @@
     color: white;
 }
 
-.pagination a:hover:not(.active) {background-color: #c7f2ff;}
+.pagination button:hover:not(.active) {background-color: #c7f2ff;}

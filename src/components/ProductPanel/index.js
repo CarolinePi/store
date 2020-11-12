@@ -3,12 +3,11 @@ import PropTypes from "prop-types";
 
 import css from './styles.css';
 import Product from "../Product";
-import {Paginator} from "../Paginator";
-
 
 export default function ProductPanel(props) {
     return (
         <div className={css.product_panel}>
+            <p>{`All products: ${props.quantity}`}</p>
             <div className={css.table_tile}>
                 {props.products.map((product) => (
                     <Product
@@ -24,12 +23,12 @@ export default function ProductPanel(props) {
                     />
                 ))}
             </div>
-            <Paginator />
         </div>
     );
 }
 
 ProductPanel.propTypes = {
     products: PropTypes.array.isRequired,
+    quantity: PropTypes.number.isRequired,
 }
 
