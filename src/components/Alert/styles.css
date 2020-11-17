@@ -1,0 +1,50 @@
+.alert {
+    display: flex;
+    align-items: center;
+    width: 400px;
+    height: 50px;
+    background-color: #d1e4d6;
+    font-size: 14px;
+    color: #143319;
+    position: absolute;
+    left: 40%;
+    top: 10%;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.alert_checkmark{
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    margin-left: 5px;
+
+}
+.alert_text{
+    width: 250px;
+    margin-right: 90px;
+}
+
+.alert_submit{
+    width: 15px;
+    height: 15px;
+    background: url(/src/icon/delete.svg);
+    background-size: contain;
+    border-style: none;
+}
+
+.alert_submit:hover{
+    width: 18px;
+    height:18px;
+
+}
+.alert_submit:active{
+    background-color: black;
+}
+
+.error {
+    color: #331419;
+    background-color: #d6a9a9;
+}

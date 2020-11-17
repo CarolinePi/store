@@ -6,7 +6,7 @@ import {Filter} from "./index";
 export function BrandFilter(props) {
     return (
             <Filter
-                brands={props.brands}
+                options={props.brands}
                 name={`brand`}
             />
     );

@@ -28,8 +28,8 @@ export function Filter(props) {
                 <button className={css.delete_filter_btn} onClick={() =>{changeFilter('')}}>&#215;</button>
             </button>
             <div className={css.filter_content}>
-                {props.brands.map((brand) => (
-                    <p key={brand} className={css.content} onClick={() =>{changeFilter(brand)}}>{brand}</p>
+                {props.options.map((option) => (
+                    <p key={option} className={css.content} onClick={() =>{changeFilter(option)}}>{option}</p>
                 ))}
             </div>
         </div>
@@ -37,6 +37,6 @@ export function Filter(props) {
 }
 
 Filter.propTypes = {
-    brands: PropTypes.arrayOf(PropTypes.string),
-    name: PropTypes.string,
+    options: PropTypes.arrayOf(PropTypes.string).isRequired,
+    name: PropTypes.string.isRequired,
 }

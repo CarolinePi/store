@@ -26,17 +26,20 @@ export const Paginator = (props) => {
 
     return (
         <div className={css.pagination}>
-            <button onClick={() =>{prevPage()}}>&laquo;</button>
+            <button className={css.btn} onClick={() =>{prevPage()}}>&laquo;</button>
             {Array.from({length: props.pages}, (_, index) => index + 1).map((number) => (
                 <button
                     key={number}
-                    className={classNames({ [css.active]: number === currentPage })}
+                    className={classNames({
+                        [css.active]: number === currentPage,
+                        [css.btn]: true,
+                    })}
                     onClick={() =>{updatePage(number)}}
                 >
                     {number}
                 </button>
             ))}
-            <button onClick={() =>{nextPage()}}>&raquo;</button>
+            <button className={css.btn} onClick={() =>{nextPage()}}>&raquo;</button>
         </div>
     )
 };

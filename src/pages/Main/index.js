@@ -7,12 +7,14 @@ export const MainStoreProvider = ({children}) => {
     const [filteredProducts, setFilteredProducts] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
     const [currentFilter, setFilter] = useState({});
+    const [currentSort, setSort] = useState('');
 
     const store = {
         product: [products, setProducts],
         page: [currentPage, setCurrentPage],
         filter: [currentFilter, setFilter],
         filteredProduct: [filteredProducts, setFilteredProducts],
+        sort: [currentSort, setSort],
     }
 
     return (

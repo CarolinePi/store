@@ -5,6 +5,8 @@ import ProductPanel from "../../components/ProductPanel";
 import {Paginator} from "../../components/Paginator";
 import {BrandFilter} from "../../components/Filter/brand"
 import {Spinner} from "../../components/Spinner";
+import {Alert} from "../../components/Alert";
+import {Sorting} from "../../components/Sorting";
 
 const productsJSON = [
     {
@@ -71,11 +73,13 @@ export const Page = () => {
             <Spinner visible={products.length === 0} />
             <NavBar />
             <BrandFilter brands={getBrands()} />
+            <Sorting />
             <ProductPanel
                 products={filteredProducts().slice(firstProduct, lastProduct)}
                 quantity={filteredProducts().length}
             />
             <Paginator pages={calculatePages()} />
+            <Alert message={`Success`} hidden={false} error={false}/>
         </>
     )
 }
